@@ -21,6 +21,9 @@ public class Progression {
     }
 
     public void printProgression(int n){
+        if (!(n == (int)n)){
+            throw new IllegalArgumentException("Please enter an Integer");
+        }
         System.out.print(nextValue());
         for (int i = 0; i < n; i++)
             System.out.print(" " + nextValue());
